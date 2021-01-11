@@ -1,0 +1,14 @@
+<%-include("partials/header");-%>
+<h1>hello</h1>
+<p><%=content%></p>
+
+<% for(let i=0;i<postSend.length;i++){ %>
+    <h1><%=postSend[i].title %></h1>
+    <p><%=postSend[i].body.substring(0,100)+"..." %></p>
+    <a href="<%="posts/"+postSend[i].title %>">Read more</a>
+    <br>
+
+<%}%>
+
+
+<%-include("partials/footer");-%>
